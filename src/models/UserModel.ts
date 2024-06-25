@@ -2,14 +2,22 @@ import mongoose from 'mongoose'
 import IUser from '../interfaces/IUser'
 
 const userSchema = new mongoose.Schema<IUser>({
+    fullName: {
+        type: String,
+        required: true,
+    },
+    age: {
+        type: Number,
+        required: true
+    },
     email: {
         type: String,
         required: true,
         unique: true
     },
-    fullName: {
+    phone: {
         type: String,
-        required: true,
+        required: true
     },
     password: {
         type: String,
@@ -19,6 +27,10 @@ const userSchema = new mongoose.Schema<IUser>({
         type: String,
         enum: ["user", "admin"],
         default: "user"
+    },
+    isActive: {
+        type: Boolean,
+        default: true
     }
 })
 

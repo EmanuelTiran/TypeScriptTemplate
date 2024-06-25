@@ -6,10 +6,12 @@ import PartialDoc from "../unions/T_PartialDoc"
 
 export default interface IUser extends Partial<Pick<Document,PartialDoc>> {
     // _id? : ObjectId | string
-    email : string
     fullName : string
+    age : number
+    email : string
+    phone : string
     password? : string
+    isActive?: boolean
     permission : Permission
-    // myOrder : ObjectId[]
 }
 

@@ -10,10 +10,10 @@ class UserController implements IController<IUser> {
         return user
     }
     read(filter: FilterQuery<IUser>): IUser[] {
-        
         throw new Error('Method not implemented.')
     }
     async readOne(filter: FilterQuery<IUser>): Promise<IUser | null> {
+        console.log({filter},"--------------------------------")
         return await UserModel.findOne(filter)
     }
     update(filter: FilterQuery<IUser>, newData: UpdateQuery<IUser>): IUser {

@@ -1,11 +1,18 @@
-class CreateNewUserRequest  {
+class CreateNewUserRequest {
+    fullName: string
+    age: number
     email: string
-    fName: string
     isRemeber: boolean
+    phone: string
 
-    constructor(email ='', fName ='', isRemeber:boolean=false){
-        this.email=email
-        this.fName=fName
-        this.isRemeber=isRemeber
+
+    constructor(fullName = '', age = 0, phone = '', email = '', isRemeber: boolean = false) {
+        this.fullName = fullName
+        this.age = age
+        this.email = email
+        this.isRemeber = isRemeber
+        this.phone = phone
     }
 }
+
+export default CreateNewUserRequest
