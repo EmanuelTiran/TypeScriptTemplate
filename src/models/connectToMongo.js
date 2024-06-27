@@ -12,3 +12,4 @@ console.log(error)
     }
 }
 module.exports = {connectToMongo};
+

@@ -6,7 +6,7 @@ class ItemController implements IController<IItem> {
     create(data: IItem): Promise<IItem> {
         throw new Error("Method not implemented.");
     }
-    read(filter: FilterQuery<IItem>): IItem[] {
+    read(filter: FilterQuery<IItem>): Promise<{ items: IItem[], count: number }> {
         throw new Error("Method not implemented.");
     }
     readOne(filter: FilterQuery<IItem>): Promise<IItem | null> {
